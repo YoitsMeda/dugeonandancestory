@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<meta charset="UTF-8"/>
+<head>
+<title>Dungeon and Ancestry</title>
+</head>
+<body class="container">
+    <h1>Dungeon and Ancestry</h1>
+    <nav th:replace="fragments :: navigation"></nav>
+<H2 th:text="${title}"></H2>
+ Username:
+<form th:object="${user}" method="post">
+<div th:for="Username" th:text="title">
+<input th:field="*{Username}"/>
+</div>
+ First Name: <br>
+<div th:for="Firstname" th:text="title">
+<input th:field="*{Firstname}"/>
+</div>
+ Last Name:   <br>  
+<div th:for="Lastname" th:text="title">
+    <input  name="Lastname" th:field="*{Lastname}"/>
+</div>
+ Email:<br>
+    <div th:for="Email" th:text="title">
+    <input th:field="*{Email}"/>
+</div>
+ Password:<br>
+<div th:for="Password" th:text="title">
+<input type="password" th:field="*{Password}"/>
+</div>
+ Confirm Password:<br>
+<div th:for="Password" th:text="title">
+<input type="password" th:field="*{Password}"/>
+</div>
+    <br>
+<div th:errors="*{Username}"></div>
+<input type="submit" value="Signup"/>
+</form>
+
+
+</body>
+</html>
