@@ -1,7 +1,5 @@
 package ycd.org.dungeonandancestry.models;
 
-import java.security.SecureRandom;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,43 +7,27 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class User
+public class descend
 {
 	@Id
 	@GeneratedValue
 	private int id;
 
 	@NotNull
-	@Size(min=3, max=15)
+	@Size(min=3, max=20)
 	private String firstname;
 
 	@NotNull
-	@Size(min=3, max=15)
+	@Size(min=3, max=20)
 	private String lastname;
 
 	@NotNull
-	@Size(min=7, max=20)
-	private String password;
+	@Size(min=3)
+	private String birthday;
 
 	@NotNull
 	@Size(min=3)
-	private String email;
-
-	@NotNull
-	@Size(min=3, max=15)
-	private String username;
-
-
-
-	public String getUsername()
-	{
-		return username;
-	}
-
-	public void setUsername(String username)
-	{
-		this.username = username;
-	}
+	private String backstory;
 
 	public String getFirstname()
 	{
@@ -67,24 +49,24 @@ public class User
 		this.lastname = lastname;
 	}
 
-	public String getPassword()
+	public String getBirthday()
 	{
-		return password;
+		return birthday;
 	}
 
-	public void setPassword(String password)
+	public void setBirthday(String birthday)
 	{
-		this.password = password;
+		this.birthday = birthday;
 	}
 
-	public String getEmail()
+	public String getBackstory()
 	{
-		return email;
+		return backstory;
 	}
 
-	public void setEmail(String email)
+	public void setBackstory(String backstory)
 	{
-		this.email = email;
+		this.backstory = backstory;
 	}
 
 	public int getId()
@@ -93,18 +75,27 @@ public class User
 	}
 
 
-	public class passwordAuth
-
-	{
-
-		SecureRandom random = new SecureRandom();
-		byte[] salt = new byte[16];
-		random.nextBytes(salt);
 
 
 
 
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
